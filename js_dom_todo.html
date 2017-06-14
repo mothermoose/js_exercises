@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+  <style>
+  .complete {
+    text-decoration: line-through;
+  }
+
+  .hidden {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <p onclick="toggleComplete(this)">Pay bills</p>
+  <p onclick="toggleComplete(this)">Wash car</p>
+  <p onclick="toggleComplete(this)">Get laundry</p>
+
+  <button onmouseup="hideCompletedTasks()">Hide Completed Tasks</button>
+  <button onmouseup="showAllTasks()">Show Completed Tasks</button>
+
+  <script>
+  function hideCompletedTasks() {
+    var completedTasks = document.querySelectorAll(".complete");
+    for (var i = 0; i < completedTasks.length; i++) {
+      var completedTask = completedTasks[i];
+      completedTask.classList.add("hidden");
+    }
+  }
+
+  function showAllTasks(){
+    var completedTasks = document.querySelectorAll(".complete");
+    for (var i = 0; i < completedTasks.length; i++) {
+      var completedTask = completedTasks[i];
+      completedTask.classList.remove("hidden");
+    }
+  }
+
+  function toggleComplete(ptag){
+    // var ptag = document.queryAllSelector('p');
+    if (ptag.style["text-decoration"] === "line-through") {
+      ptag.style["text-decoration"] = "none";
+    } else {
+      ptag.style["text-decoration"] = "line-through";
+    }
+  }
+  </script>
+</body>
+</html>

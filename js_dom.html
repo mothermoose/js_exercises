@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+#myDiv {
+    border: 1px solid #FF0000;
+}
+.fancy {
+  font-style: italic;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+</head>
+<body>
+<div id="myDiv">
+  <h1 ondblclick="toggleDetails()" id="myH1">Alexander Hamilton</h1>
+  <p>Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation's financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p> 
+</div>
+
+  <script>
+
+    function toggleDetails() {
+      var ptag = document.querySelector('p');
+      if (ptag.style["display"] === "none") {
+        ptag.style["display"] = "block";
+      } else {
+        ptag.style["display"] = "none";
+      }
+    }
+  </script>
+
+ 
+
+<br>
+
+ <button onclick="red()" class="btn">Reddener</button>
+
+<button onclick="padding()" class="btn">Pad That Shit</button>
+  <script>
+
+    function padding(){
+      document.getElementById("myDiv").style.paddingLeft = "100px";
+    }
+    function red() {
+      document.getElementById("myH1").style.color = "red";
+    }
+
+  </script>
+
+    <p onmousedown="changeParagraph(this)" >First p tag</p>
+    <p onmousedown="changeParagraph(this)" >Second p tag</p> 
+    <p onmousedown="changeParagraph(this)" >Third p tag</p> 
+    <p onmousedown="changeParagraph(this)" >Fourth p tag</p>
+
+
+  <button onclick="styleAllParagraphs()"> Toggle paragraph style</button>
+
+
+  <script>
+  function styleAllParagraphs() {
+      var ptag = document.querySelector("p");
+      for(var i = 0; i < ptags.length; i++) {
+       var ptag = ptags[i]; 
+       ptag.classLIst.toggle("fancy");
+
+    function changeParagraph(ptag){
+      ptag.style.color = "red";
+    }
+  </script>
+
+
+
+</body>
+</html>
+</script>
+  
+</body>
+</html>
